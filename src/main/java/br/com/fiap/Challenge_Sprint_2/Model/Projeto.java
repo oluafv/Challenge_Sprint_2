@@ -1,12 +1,13 @@
 package br.com.fiap.Challenge_Sprint_2.Model;
 
-import com.ethlo.time.DateTime;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.time.LocalDateTime;
 
 @Document(collection = "projeto")
 @Getter
@@ -20,20 +21,19 @@ public class Projeto {
 
     private String titulo;
     private String descricao;
-    private int ideiaOrigemId;
-    private int resposanvelId;
-    private String responsavelnome;
+    private String ideiaOrigemId;
+    private String responsavelId;
+
+    private String responsavelNome;
+    private String estrategiaId;
+
     private StatusProjeto status;
-    private int progresso;
+    private Integer progresso;
     private Double investimento;
     private Double retornoFinanceiro;
     private Double reducaoCustos;
     private Double ganhoProdutividade;
-    private int prazoDias;
-    private DateTime criadoEm;
-    private DateTime atualizadoEm;
-
-
-
-
+    private Integer prazoDias;
+    private LocalDateTime criadoEm;
+    private LocalDateTime atualizadoEm;
 }

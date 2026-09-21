@@ -1,12 +1,14 @@
 package br.com.fiap.Challenge_Sprint_2.Model;
 
-import com.ethlo.time.DateTime;
+import br.com.fiap.Challenge_Sprint_2.DTOs.AnaliseAiResponse;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.time.LocalDateTime;
 
 @Document(collection = "ideias")
 @Getter
@@ -21,16 +23,13 @@ public class Ideia {
     private String titulo;
     private String descricao;
     private String categoria;
-    private int autorId;
+    private String autorId;
     private String autorNome;
+    private String estrategiaId;
     private StatusIdeia status;
-    private int prioridade;
-    private int votos;
-    private DateTime criadoEm;
-    private DateTime atualizadoEm;
-
-
-
+    private Integer prioridade;
+    private Integer votos;
+    private LocalDateTime criadoEm;
+    private LocalDateTime atualizadoEm;
+    private AnaliseAiResponse analiseAi;
 }
-
-

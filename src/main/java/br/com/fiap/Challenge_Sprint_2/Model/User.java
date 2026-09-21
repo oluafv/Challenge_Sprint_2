@@ -28,8 +28,8 @@ public class User implements UserDetails {
     private String senha;
     private String nome;
     private UserRole userRole;
-    private int pontos;
-    private int ideiasAprovadas;
+    private Integer pontos;
+    private Integer ideiasAprovadas;
 
 
     @Override

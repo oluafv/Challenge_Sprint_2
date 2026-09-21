@@ -1,6 +1,5 @@
 package br.com.fiap.Challenge_Sprint_2.Model;
 
-import com.ethlo.time.DateTime;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,7 +7,9 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "orientacao_estrategica")
+import java.time.LocalDate;
+
+@Document(collection = "orientacoes_estrategicas")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -18,12 +19,8 @@ public class OrientacaoEstrategica {
     @Id
     private String id;
 
-    private String titulo;
-    private String descricao;
-    private String pilar;
-    private String criadoPor;
-    private DateTime criadoEm;
-
-
-
+    private String categoria;
+    private String campanha;
+    private String descricaoObjetivo;
+    private LocalDate data;
 }
